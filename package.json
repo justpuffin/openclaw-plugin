@@ -1,0 +1,48 @@
+{
+  "name": "puffin-openclaw",
+  "version": "0.1.0",
+  "description": "Puffin for OpenClaw: your agent's inbox, chats, contacts, calendar and tasks as tools, with approvals",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "homepage": "https://www.justpuffin.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justpuffin/openclaw-plugin.git"
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "puffin",
+    "email",
+    "agent",
+    "mcp"
+  ],
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24.22.1"
+  },
+  "scripts": {
+    "test": "node --import ./test/register.mjs --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "typebox": "^1.1.38"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.5.17"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.5.17",
+      "minGatewayVersion": "2026.5.17"
+    }
+  }
+}

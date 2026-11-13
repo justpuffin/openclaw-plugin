@@ -1,0 +1,50 @@
+{
+  "id": "puffin",
+  "name": "Puffin",
+  "description": "Your Puffin agent's inbox, chats (Slack, Discord, Telegram), texts, contacts, calendar and tasks as tools; every send waits for your approval.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "Puffin agent key (pf_...). Or set PUFFIN_API_KEY in the environment."
+      },
+      "apiUrl": {
+        "type": "string",
+        "description": "Puffin API address. Default https://api.justpuffin.tech"
+      }
+    }
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "puffin_messages",
+      "puffin_search_messages",
+      "puffin_message",
+      "puffin_thread",
+      "puffin_threads",
+      "puffin_mark_read",
+      "puffin_reply",
+      "puffin_send_message",
+      "puffin_channels",
+      "puffin_create_draft",
+      "puffin_drafts",
+      "puffin_send_draft",
+      "puffin_contacts",
+      "puffin_contact",
+      "puffin_contact_timeline",
+      "puffin_memories",
+      "puffin_remember",
+      "puffin_calendar_events",
+      "puffin_calendar_free_busy",
+      "puffin_calendar_create_event",
+      "puffin_sending_status",
+      "puffin_tasks",
+      "puffin_delegate_task"
+    ]
+  }
+}
